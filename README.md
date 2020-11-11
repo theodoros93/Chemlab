@@ -1,5 +1,5 @@
 # Chemlab
-diploma-Thesis 2020
+Diploma-Thesis 2020
 
 This is a website for Chemichals, developed as part of a diploma thesis, by Theodoros Alexandrou, supervised by Minas Dasygenis (https://arch.icte.uowm.gr/mdasyg/index.php)
 
