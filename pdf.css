@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
+
+html, body{
+    font-family: 'Saira Semi Condensed', sans-serif;
+}
+
+h1{
+    color: #006400;
+}
+
+th, td{
+    max-width: 80px;
+    padding: 3px !important;
+}
+
+th{
+    font-size: 12px;
+}
+
+input{
+    border: none;
+    background: none;
+}
+
+td:nth-child(1), th[data-text="a/a"]{
+    max-width: 30px;
+    width: 30px;
+}
+
+.stage-text{
+    background: #808000;
+    color: #fff;
+}

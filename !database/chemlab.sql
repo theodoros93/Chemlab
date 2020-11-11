@@ -1,0 +1,677 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : localhost
+ Source Server Type    : MariaDB
+ Source Server Version : 100138
+ Source Host           : localhost:3306
+ Source Schema         : pharmathen
+
+ Target Server Type    : MariaDB
+ Target Server Version : 100138
+ File Encoding         : 65001
+
+ Date: 20/02/2020 12:28:01
+*/
+
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for api
+-- ----------------------------
+DROP TABLE IF EXISTS `api`;
+CREATE TABLE `api`  (
+  `id` int(50) NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of api
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for exports
+-- ----------------------------
+DROP TABLE IF EXISTS `exports`;
+CREATE TABLE `exports`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `content` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+  `total_stages` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `total_cost` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `density` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `mw` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `qty_out` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `w_w_yield` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `cc_kg_output` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `api_cc` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `actual_cc_kg_api` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `mol` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `mol_yield` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `contribution` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `created_at` timestamp(0) NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of exports
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for material_price
+-- ----------------------------
+DROP TABLE IF EXISTS `material_price`;
+CREATE TABLE `material_price`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `material_id` int(11) NULL DEFAULT NULL,
+  `price` decimal(10, 2) NULL DEFAULT NULL,
+  `date` date NULL DEFAULT NULL,
+  `created_at` timestamp(0) NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 469 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of material_price
+-- ----------------------------
+INSERT INTO `material_price` VALUES (1, 1, 63.00, '2019-10-01', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (2, 1, 19.00, '2019-10-02', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (3, 2, 31.00, '2019-10-01', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (4, 2, 52.00, '2019-10-02', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (5, 2, 29.00, '2019-10-03', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (6, 2, 80.00, '2019-10-04', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (7, 2, 92.00, '2019-10-05', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (8, 2, 60.00, '2019-10-06', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (9, 2, 73.00, '2019-10-07', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (10, 2, 99.00, '2019-10-08', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (11, 2, 85.00, '2019-10-09', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (12, 2, 26.00, '2019-10-10', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (13, 2, 54.00, '2019-10-11', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (14, 2, 70.00, '2019-10-12', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (15, 2, 73.00, '2019-10-13', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (16, 2, 67.00, '2019-10-14', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (17, 2, 17.00, '2019-10-15', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (18, 2, 1.00, '2019-10-16', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (19, 2, 38.00, '2019-10-17', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (20, 2, 44.00, '2019-10-18', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (21, 3, 5.00, '2019-10-01', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (22, 3, 38.00, '2019-10-02', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (23, 3, 25.00, '2019-10-03', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (24, 3, 21.00, '2019-10-04', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (25, 3, 65.00, '2019-10-05', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (26, 3, 48.00, '2019-10-06', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (27, 3, 29.00, '2019-10-07', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (28, 4, 21.00, '2019-10-01', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (29, 4, 19.00, '2019-10-02', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (30, 4, 70.00, '2019-10-03', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (31, 4, 63.00, '2019-10-04', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (32, 4, 2.00, '2019-10-05', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (33, 5, 78.00, '2019-10-01', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (34, 5, 58.00, '2019-10-02', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (35, 5, 55.00, '2019-10-03', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (36, 5, 72.00, '2019-10-04', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (37, 5, 100.00, '2019-10-05', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (38, 5, 80.00, '2019-10-06', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (39, 5, 81.00, '2019-10-07', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (40, 5, 95.00, '2019-10-08', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (41, 5, 78.00, '2019-10-09', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (42, 5, 50.00, '2019-10-10', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (43, 5, 82.00, '2019-10-11', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (44, 5, 80.00, '2019-10-12', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (45, 5, 17.00, '2019-10-13', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (46, 5, 99.00, '2019-10-14', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (47, 5, 97.00, '2019-10-15', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (48, 5, 94.00, '2019-10-16', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (49, 5, 46.00, '2019-10-17', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (50, 5, 97.00, '2019-10-18', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (51, 5, 49.00, '2019-10-19', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (52, 5, 60.00, '2019-10-20', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (53, 5, 29.00, '2019-10-21', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (54, 5, 33.00, '2019-10-22', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (55, 5, 36.00, '2019-10-23', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (56, 5, 42.00, '2019-10-24', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (57, 5, 6.00, '2019-10-25', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (58, 5, 48.00, '2019-10-26', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (59, 5, 31.00, '2019-10-27', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (60, 6, 82.00, '2019-10-01', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (61, 6, 61.00, '2019-10-02', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (62, 6, 99.00, '2019-10-03', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (63, 6, 84.00, '2019-10-04', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (64, 6, 74.00, '2019-10-05', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (65, 6, 8.00, '2019-10-06', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (66, 6, 83.00, '2019-10-07', '2019-11-17 23:57:53');
+INSERT INTO `material_price` VALUES (67, 6, 33.00, '2019-10-08', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (68, 6, 64.00, '2019-10-09', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (69, 6, 47.00, '2019-10-10', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (70, 6, 59.00, '2019-10-11', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (71, 6, 82.00, '2019-10-12', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (72, 6, 94.00, '2019-10-13', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (73, 6, 88.00, '2019-10-14', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (74, 6, 87.00, '2019-10-15', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (75, 6, 70.00, '2019-10-16', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (76, 6, 47.00, '2019-10-17', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (77, 6, 94.00, '2019-10-18', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (78, 7, 53.00, '2019-10-01', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (79, 7, 27.00, '2019-10-02', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (80, 7, 53.00, '2019-10-03', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (81, 7, 32.00, '2019-10-04', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (82, 7, 30.00, '2019-10-05', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (83, 7, 36.00, '2019-10-06', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (84, 7, 80.00, '2019-10-07', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (85, 7, 38.00, '2019-10-08', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (86, 7, 45.00, '2019-10-09', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (87, 7, 65.00, '2019-10-10', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (88, 7, 8.00, '2019-10-11', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (89, 8, 60.00, '2019-10-01', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (90, 8, 37.00, '2019-10-02', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (91, 8, 91.00, '2019-10-03', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (92, 8, 26.00, '2019-10-04', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (93, 8, 81.00, '2019-10-05', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (94, 8, 10.00, '2019-10-06', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (95, 8, 42.00, '2019-10-07', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (96, 8, 1.00, '2019-10-08', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (97, 8, 70.00, '2019-10-09', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (98, 8, 40.00, '2019-10-10', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (99, 8, 97.00, '2019-10-11', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (100, 8, 99.00, '2019-10-12', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (101, 8, 16.00, '2019-10-13', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (102, 8, 43.00, '2019-10-14', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (103, 8, 18.00, '2019-10-15', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (104, 8, 70.00, '2019-10-16', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (105, 8, 55.00, '2019-10-17', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (106, 8, 85.00, '2019-10-18', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (107, 8, 28.00, '2019-10-19', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (108, 9, 19.00, '2019-10-01', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (109, 9, 58.00, '2019-10-02', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (110, 9, 39.00, '2019-10-03', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (111, 9, 88.00, '2019-10-04', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (112, 9, 42.00, '2019-10-05', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (113, 9, 89.00, '2019-10-06', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (114, 9, 95.00, '2019-10-07', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (115, 9, 53.00, '2019-10-08', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (116, 9, 82.00, '2019-10-09', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (117, 9, 39.00, '2019-10-10', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (118, 9, 66.00, '2019-10-11', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (119, 9, 24.00, '2019-10-12', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (120, 9, 23.00, '2019-10-13', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (121, 9, 53.00, '2019-10-14', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (122, 9, 33.00, '2019-10-15', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (123, 9, 31.00, '2019-10-16', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (124, 9, 24.00, '2019-10-17', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (125, 9, 32.00, '2019-10-18', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (126, 9, 77.00, '2019-10-19', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (127, 10, 45.00, '2019-10-01', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (128, 10, 15.00, '2019-10-02', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (129, 10, 14.00, '2019-10-03', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (130, 10, 31.00, '2019-10-04', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (131, 10, 97.00, '2019-10-05', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (132, 10, 43.00, '2019-10-06', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (133, 10, 31.00, '2019-10-07', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (134, 10, 22.00, '2019-10-08', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (135, 10, 78.00, '2019-10-09', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (136, 10, 100.00, '2019-10-10', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (137, 10, 88.00, '2019-10-11', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (138, 10, 1.00, '2019-10-12', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (139, 10, 90.00, '2019-10-13', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (140, 10, 90.00, '2019-10-14', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (141, 10, 76.00, '2019-10-15', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (142, 10, 18.00, '2019-10-16', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (143, 10, 56.00, '2019-10-17', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (144, 10, 86.00, '2019-10-18', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (145, 10, 2.00, '2019-10-19', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (146, 10, 43.00, '2019-10-20', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (147, 10, 51.00, '2019-10-21', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (148, 10, 31.00, '2019-10-22', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (149, 11, 20.00, '2019-10-01', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (150, 11, 10.00, '2019-10-02', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (151, 11, 56.00, '2019-10-03', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (152, 11, 52.00, '2019-10-04', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (153, 11, 45.00, '2019-10-05', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (154, 11, 96.00, '2019-10-06', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (155, 11, 80.00, '2019-10-07', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (156, 11, 81.00, '2019-10-08', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (157, 11, 36.00, '2019-10-09', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (158, 11, 26.00, '2019-10-10', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (159, 12, 44.00, '2019-10-01', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (160, 12, 91.00, '2019-10-02', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (161, 12, 40.00, '2019-10-03', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (162, 12, 55.00, '2019-10-04', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (163, 12, 73.00, '2019-10-05', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (164, 12, 16.00, '2019-10-06', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (165, 12, 44.00, '2019-10-07', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (166, 13, 61.00, '2019-10-01', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (167, 13, 2.00, '2019-10-02', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (168, 13, 100.00, '2019-10-03', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (169, 13, 49.00, '2019-10-04', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (170, 13, 63.00, '2019-10-05', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (171, 13, 8.00, '2019-10-06', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (172, 13, 9.00, '2019-10-07', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (173, 13, 4.00, '2019-10-08', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (174, 13, 64.00, '2019-10-09', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (175, 13, 38.00, '2019-10-10', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (176, 13, 43.00, '2019-10-11', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (177, 13, 55.00, '2019-10-12', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (178, 13, 28.00, '2019-10-13', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (179, 13, 27.00, '2019-10-14', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (180, 13, 30.00, '2019-10-15', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (181, 13, 39.00, '2019-10-16', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (182, 13, 82.00, '2019-10-17', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (183, 13, 27.00, '2019-10-18', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (184, 13, 64.00, '2019-10-19', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (185, 13, 2.00, '2019-10-20', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (186, 13, 46.00, '2019-10-21', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (187, 13, 40.00, '2019-10-22', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (188, 13, 24.00, '2019-10-23', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (189, 13, 16.00, '2019-10-24', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (190, 14, 15.00, '2019-10-01', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (191, 14, 36.00, '2019-10-02', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (192, 14, 89.00, '2019-10-03', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (193, 14, 15.00, '2019-10-04', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (194, 14, 79.00, '2019-10-05', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (195, 14, 35.00, '2019-10-06', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (196, 14, 15.00, '2019-10-07', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (197, 14, 71.00, '2019-10-08', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (198, 14, 98.00, '2019-10-09', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (199, 14, 65.00, '2019-10-10', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (200, 14, 96.00, '2019-10-11', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (201, 15, 22.00, '2019-10-01', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (202, 15, 28.00, '2019-10-02', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (203, 15, 38.00, '2019-10-03', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (204, 15, 78.00, '2019-10-04', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (205, 15, 8.00, '2019-10-05', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (206, 15, 50.00, '2019-10-06', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (207, 15, 99.00, '2019-10-07', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (208, 15, 33.00, '2019-10-08', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (209, 15, 32.00, '2019-10-09', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (210, 15, 57.00, '2019-10-10', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (211, 16, 60.00, '2019-10-01', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (212, 16, 85.00, '2019-10-02', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (213, 16, 97.00, '2019-10-03', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (214, 16, 24.00, '2019-10-04', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (215, 16, 17.00, '2019-10-05', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (216, 16, 21.00, '2019-10-06', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (217, 16, 39.00, '2019-10-07', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (218, 16, 65.00, '2019-10-08', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (219, 16, 45.00, '2019-10-09', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (220, 16, 99.00, '2019-10-10', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (221, 16, 40.00, '2019-10-11', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (222, 16, 36.00, '2019-10-12', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (223, 16, 1.00, '2019-10-13', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (224, 16, 7.00, '2019-10-14', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (225, 16, 67.00, '2019-10-15', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (226, 16, 22.00, '2019-10-16', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (227, 16, 54.00, '2019-10-17', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (228, 16, 40.00, '2019-10-18', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (229, 16, 93.00, '2019-10-19', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (230, 16, 100.00, '2019-10-20', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (231, 16, 91.00, '2019-10-21', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (232, 16, 89.00, '2019-10-22', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (233, 16, 45.00, '2019-10-23', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (234, 16, 88.00, '2019-10-24', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (235, 16, 27.00, '2019-10-25', '2019-11-17 23:57:54');
+INSERT INTO `material_price` VALUES (236, 16, 88.00, '2019-10-26', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (237, 16, 74.00, '2019-10-27', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (238, 16, 40.00, '2019-10-28', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (239, 16, 28.00, '2019-10-29', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (240, 16, 25.00, '2019-10-30', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (241, 16, 55.00, '2019-10-31', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (242, 17, 44.00, '2019-10-01', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (243, 17, 100.00, '2019-10-02', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (244, 17, 10.00, '2019-10-03', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (245, 17, 56.00, '2019-10-04', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (246, 17, 36.00, '2019-10-05', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (247, 17, 18.00, '2019-10-06', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (248, 17, 42.00, '2019-10-07', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (249, 17, 30.00, '2019-10-08', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (250, 17, 80.00, '2019-10-09', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (251, 17, 27.00, '2019-10-10', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (252, 17, 90.00, '2019-10-11', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (253, 17, 79.00, '2019-10-12', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (254, 17, 43.00, '2019-10-13', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (255, 17, 27.00, '2019-10-14', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (256, 17, 72.00, '2019-10-15', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (257, 17, 84.00, '2019-10-16', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (258, 17, 52.00, '2019-10-17', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (259, 17, 97.00, '2019-10-18', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (260, 17, 69.00, '2019-10-19', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (261, 18, 71.00, '2019-10-01', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (262, 18, 71.00, '2019-10-02', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (263, 18, 40.00, '2019-10-03', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (264, 18, 30.00, '2019-10-04', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (265, 18, 58.00, '2019-10-05', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (266, 18, 91.00, '2019-10-06', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (267, 18, 89.00, '2019-10-07', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (268, 18, 46.00, '2019-10-08', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (269, 18, 75.00, '2019-10-09', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (270, 18, 26.00, '2019-10-10', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (271, 18, 71.00, '2019-10-11', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (272, 18, 8.00, '2019-10-12', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (273, 18, 21.00, '2019-10-13', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (274, 18, 21.00, '2019-10-14', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (275, 18, 34.00, '2019-10-15', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (276, 18, 9.00, '2019-10-16', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (277, 18, 27.00, '2019-10-17', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (278, 18, 91.00, '2019-10-18', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (279, 18, 64.00, '2019-10-19', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (280, 19, 73.00, '2019-10-01', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (281, 19, 78.00, '2019-10-02', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (282, 19, 9.00, '2019-10-03', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (283, 19, 36.00, '2019-10-04', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (284, 19, 54.00, '2019-10-05', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (285, 19, 33.00, '2019-10-06', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (286, 19, 36.00, '2019-10-07', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (287, 19, 36.00, '2019-10-08', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (288, 19, 13.00, '2019-10-09', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (289, 19, 14.00, '2019-10-10', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (290, 19, 60.00, '2019-10-11', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (291, 19, 38.00, '2019-10-12', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (292, 19, 5.00, '2019-10-13', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (293, 19, 64.00, '2019-10-14', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (294, 19, 76.00, '2019-10-15', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (295, 19, 40.00, '2019-10-16', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (296, 19, 92.00, '2019-10-17', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (297, 19, 97.00, '2019-10-18', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (298, 19, 83.00, '2019-10-19', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (299, 19, 79.00, '2019-10-20', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (300, 19, 73.00, '2019-10-21', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (301, 19, 23.00, '2019-10-22', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (302, 19, 33.00, '2019-10-23', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (303, 19, 63.00, '2019-10-24', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (304, 19, 43.00, '2019-10-25', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (305, 19, 29.00, '2019-10-26', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (306, 19, 31.00, '2019-10-27', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (307, 20, 17.00, '2019-10-01', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (308, 20, 22.00, '2019-10-02', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (309, 20, 8.00, '2019-10-03', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (310, 20, 66.00, '2019-10-04', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (311, 20, 70.00, '2019-10-05', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (312, 20, 11.00, '2019-10-06', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (313, 20, 42.00, '2019-10-07', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (314, 20, 7.00, '2019-10-08', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (315, 20, 91.00, '2019-10-09', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (316, 20, 32.00, '2019-10-10', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (317, 20, 31.00, '2019-10-11', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (318, 20, 81.00, '2019-10-12', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (319, 20, 92.00, '2019-10-13', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (320, 20, 40.00, '2019-10-14', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (321, 20, 80.00, '2019-10-15', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (322, 20, 45.00, '2019-10-16', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (323, 20, 53.00, '2019-10-17', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (324, 20, 58.00, '2019-10-18', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (325, 20, 81.00, '2019-10-19', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (326, 20, 84.00, '2019-10-20', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (327, 20, 87.00, '2019-10-21', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (328, 21, 46.00, '2019-10-01', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (329, 21, 66.00, '2019-10-02', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (330, 21, 6.00, '2019-10-03', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (331, 21, 55.00, '2019-10-04', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (332, 21, 91.00, '2019-10-05', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (333, 21, 91.00, '2019-10-06', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (334, 21, 26.00, '2019-10-07', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (335, 21, 12.00, '2019-10-08', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (336, 21, 91.00, '2019-10-09', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (337, 21, 51.00, '2019-10-10', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (338, 21, 78.00, '2019-10-11', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (339, 21, 24.00, '2019-10-12', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (340, 21, 33.00, '2019-10-13', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (341, 21, 61.00, '2019-10-14', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (342, 21, 44.00, '2019-10-15', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (343, 21, 13.00, '2019-10-16', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (344, 21, 70.00, '2019-10-17', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (345, 21, 49.00, '2019-10-18', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (346, 21, 22.00, '2019-10-19', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (347, 21, 45.00, '2019-10-20', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (348, 21, 16.00, '2019-10-21', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (349, 21, 43.00, '2019-10-22', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (350, 21, 13.00, '2019-10-23', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (351, 22, 89.00, '2019-10-01', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (352, 22, 40.00, '2019-10-02', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (353, 22, 28.00, '2019-10-03', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (354, 22, 54.00, '2019-10-04', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (355, 22, 43.00, '2019-10-05', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (356, 22, 36.00, '2019-10-06', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (357, 22, 37.00, '2019-10-07', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (358, 22, 23.00, '2019-10-08', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (359, 22, 34.00, '2019-10-09', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (360, 22, 56.00, '2019-10-10', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (361, 22, 17.00, '2019-10-11', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (362, 22, 33.00, '2019-10-12', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (363, 22, 52.00, '2019-10-13', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (364, 22, 66.00, '2019-10-14', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (365, 22, 72.00, '2019-10-15', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (366, 22, 8.00, '2019-10-16', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (367, 22, 20.00, '2019-10-17', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (368, 22, 50.00, '2019-10-18', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (369, 22, 23.00, '2019-10-19', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (370, 22, 29.00, '2019-10-20', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (371, 22, 88.00, '2019-10-21', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (372, 23, 14.00, '2019-10-01', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (373, 23, 99.00, '2019-10-02', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (374, 23, 19.00, '2019-10-03', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (375, 23, 59.00, '2019-10-04', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (376, 23, 69.00, '2019-10-05', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (377, 23, 7.00, '2019-10-06', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (378, 23, 40.00, '2019-10-07', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (379, 23, 88.00, '2019-10-08', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (380, 23, 88.00, '2019-10-09', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (381, 23, 61.00, '2019-10-10', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (382, 23, 97.00, '2019-10-11', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (383, 23, 2.00, '2019-10-12', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (384, 23, 70.00, '2019-10-13', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (385, 23, 80.00, '2019-10-14', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (386, 23, 66.00, '2019-10-15', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (387, 23, 43.00, '2019-10-16', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (388, 23, 93.00, '2019-10-17', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (389, 23, 7.00, '2019-10-18', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (390, 23, 98.00, '2019-10-19', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (391, 23, 6.00, '2019-10-20', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (392, 23, 35.00, '2019-10-21', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (393, 23, 90.00, '2019-10-22', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (394, 23, 40.00, '2019-10-23', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (395, 23, 5.00, '2019-10-24', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (396, 24, 68.00, '2019-10-01', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (397, 24, 26.00, '2019-10-02', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (398, 24, 63.00, '2019-10-03', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (399, 24, 47.00, '2019-10-04', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (400, 24, 28.00, '2019-10-05', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (401, 24, 22.00, '2019-10-06', '2019-11-17 23:57:55');
+INSERT INTO `material_price` VALUES (402, 24, 83.00, '2019-10-07', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (403, 24, 56.00, '2019-10-08', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (404, 24, 23.00, '2019-10-09', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (405, 24, 5.00, '2019-10-10', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (406, 24, 73.00, '2019-10-11', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (407, 24, 96.00, '2019-10-12', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (408, 24, 92.00, '2019-10-13', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (409, 24, 80.00, '2019-10-14', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (410, 24, 36.00, '2019-10-15', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (411, 24, 13.00, '2019-10-16', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (412, 24, 22.00, '2019-10-17', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (413, 24, 43.00, '2019-10-18', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (414, 24, 6.00, '2019-10-19', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (415, 24, 36.00, '2019-10-20', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (416, 24, 47.00, '2019-10-21', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (417, 24, 61.00, '2019-10-22', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (418, 24, 6.00, '2019-10-23', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (419, 24, 79.00, '2019-10-24', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (420, 24, 8.00, '2019-10-25', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (421, 24, 83.00, '2019-10-26', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (422, 24, 20.00, '2019-10-27', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (423, 24, 48.00, '2019-10-28', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (424, 25, 40.00, '2019-10-01', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (425, 25, 59.00, '2019-10-02', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (426, 25, 82.00, '2019-10-03', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (427, 25, 92.00, '2019-10-04', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (428, 25, 70.00, '2019-10-05', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (429, 25, 33.00, '2019-10-06', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (430, 25, 31.00, '2019-10-07', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (431, 25, 98.00, '2019-10-08', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (432, 25, 83.00, '2019-10-09', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (433, 25, 96.00, '2019-10-10', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (434, 25, 2.00, '2019-10-11', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (435, 25, 59.00, '2019-10-12', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (436, 25, 2.00, '2019-10-13', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (437, 25, 15.00, '2019-10-14', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (438, 25, 87.00, '2019-10-15', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (439, 25, 54.00, '2019-10-16', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (440, 25, 53.00, '2019-10-17', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (441, 25, 45.00, '2019-10-18', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (442, 25, 78.00, '2019-10-19', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (443, 25, 79.00, '2019-10-20', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (444, 25, 12.00, '2019-10-21', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (445, 25, 21.00, '2019-10-22', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (446, 25, 38.00, '2019-10-23', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (447, 25, 11.00, '2019-10-24', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (448, 25, 11.00, '2019-10-25', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (449, 25, 83.00, '2019-10-26', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (450, 25, 69.00, '2019-10-27', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (451, 25, 5.00, '2019-10-28', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (452, 25, 15.00, '2019-10-29', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (453, 25, 41.00, '2019-10-30', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (454, 26, 62.00, '2019-10-01', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (455, 26, 49.00, '2019-10-02', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (456, 26, 50.00, '2019-10-03', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (457, 26, 43.00, '2019-10-04', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (458, 26, 87.00, '2019-10-05', '2019-11-17 23:57:56');
+INSERT INTO `material_price` VALUES (460, 1, 10.99, '2019-12-14', '2019-12-08 17:16:43');
+INSERT INTO `material_price` VALUES (461, 1, 545.00, '2019-12-15', '2019-12-08 17:25:40');
+INSERT INTO `material_price` VALUES (462, 1, 22.98, '2019-12-17', '2019-12-08 17:25:49');
+INSERT INTO `material_price` VALUES (463, 41, 4535.00, '2019-12-19', '2019-12-08 17:26:45');
+INSERT INTO `material_price` VALUES (464, 37, 11.00, '2019-12-08', '2019-12-08 17:26:58');
+INSERT INTO `material_price` VALUES (465, 37, 22.00, '2019-12-11', '2019-12-08 17:27:57');
+INSERT INTO `material_price` VALUES (466, 1, 3.00, '2019-12-31', '2019-12-27 19:52:20');
+INSERT INTO `material_price` VALUES (467, 1, 800.00, '2019-12-28', '2019-12-28 21:47:47');
+INSERT INTO `material_price` VALUES (468, 1, 11.00, '2020-02-16', '2020-02-16 16:47:03');
+
+-- ----------------------------
+-- Table structure for materials
+-- ----------------------------
+DROP TABLE IF EXISTS `materials`;
+CREATE TABLE `materials`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `category` tinyint(1) NULL DEFAULT 1 COMMENT 'RAW: 0, INTERMEDIATE:1',
+  `cas` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  `density` decimal(7, 2) NULL DEFAULT NULL COMMENT 'ΠΥΚΝΟΤΗΤΑ / sp.gr',
+  `mw` decimal(7, 2) NULL DEFAULT NULL COMMENT 'ΜΟΡΙΑΚΟ ΒΑΡΟΣ',
+  `type` varchar(10) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT 'SOLID',
+  `created_at` timestamp(0) NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 65 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of materials
+-- ----------------------------
+INSERT INTO `materials` VALUES (1, 1, '72', 'MATERIAL A', 4.00, 563.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (2, 1, '23', 'MATERIAL B', 43.00, 363.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (3, 1, '141', 'MATERIAL C', 546.00, 836.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (4, 1, '76', 'MATERIAL D', 5465.00, 3.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (5, 1, '75', 'MATERIAL E', 1.00, 4.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (6, 1, '96', 'MATERIAL F', 1.00, 891.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (7, 1, '71', 'MATERIAL G', 1.00, 435.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (8, 1, '26', 'MATERIAL H', 1.00, 573.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (9, 1, '65', 'MATERIAL I', 1.00, 581.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (10, 1, '49', 'MATERIAL J', 1.00, 778.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (11, 1, '46', 'MATERIAL K', 1.00, 147.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (12, 1, '84', 'MATERIAL L', 1.00, 366.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (13, 1, '96', 'MATERIAL M', 1.00, 424.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (14, 1, '46', 'MATERIAL N', 1.00, 266.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (15, 1, '35', 'MATERIAL O', 1.00, 569.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (16, 1, '54', 'MATERIAL P', 1.00, 757.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (17, 1, '33', 'MATERIAL Q', 1.00, 753.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (18, 1, '3', 'MATERIAL R', 1.00, 257.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (19, 1, '47', 'MATERIAL S', 1.00, 605.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (20, 1, '59', 'MATERIAL T', 1.00, 329.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (21, 1, '68', 'MATERIAL U', 1.00, 935.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (22, 1, '27', 'MATERIAL V', 1.00, 676.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (23, 1, '51', 'MATERIAL W', 1.00, 346.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (24, 1, '84', 'MATERIAL X', 1.00, 943.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (25, 1, '52', 'MATERIAL Y', 1.00, 267.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (26, 1, '76', 'MATERIAL Z', 1.00, 422.00, 'LIQUID', '2019-11-17 23:55:51');
+INSERT INTO `materials` VALUES (36, 1, '140-75-0', 'EXCEL 1A', 2.00, 125.16, 'LIQUID', '2019-12-04 23:13:14');
+INSERT INTO `materials` VALUES (37, 1, '1', 'EXCEL 1B', 1.00, 101.19, 'SOLID', '2019-12-04 23:14:39');
+INSERT INTO `materials` VALUES (38, 1, '2', 'EXCEL 1C', 0.79, NULL, 'SOLID', '2019-12-04 23:16:04');
+INSERT INTO `materials` VALUES (39, 1, '3', 'EXCEL 1D', 1.00, NULL, 'SOLID', '2019-12-04 23:16:22');
+INSERT INTO `materials` VALUES (40, 1, '4', 'EXCEL 1E', 1.00, NULL, 'SOLID', '2019-12-04 23:16:34');
+INSERT INTO `materials` VALUES (41, 1, '5', 'EXCEL 2A', 1.00, 58.32, 'SOLID', '2019-12-04 23:17:19');
+INSERT INTO `materials` VALUES (42, 1, '6', 'EXCEL 2B', 1.00, 220.07, 'SOLID', '2019-12-04 23:17:42');
+INSERT INTO `materials` VALUES (43, 1, '7', 'EXCEL 2C', 1.03, 99.13, 'LIQUID', '2019-12-04 23:51:34');
+INSERT INTO `materials` VALUES (44, 1, '8', 'EXCEL 2D', 0.79, NULL, 'LIQUID', '2019-12-04 23:51:44');
+INSERT INTO `materials` VALUES (45, 1, '9', 'EXCEL 2E', 1.18, NULL, 'LIQUID', '2019-12-04 23:52:40');
+INSERT INTO `materials` VALUES (46, 1, '10', 'EXCEL 2F', 1.00, NULL, 'SOLID', '2019-12-04 23:52:56');
+INSERT INTO `materials` VALUES (47, 1, '11', 'EXCEL 2G', 1.00, NULL, 'SOLID', '2019-12-04 23:54:36');
+INSERT INTO `materials` VALUES (48, 1, '0', 'EXCEL 1-KEY', 1.00, 361.35, 'SOLID', '2019-12-05 00:27:35');
+INSERT INTO `materials` VALUES (49, 1, '2', 'EXCEL 1C', 0.79, 45.00, 'LIQUID', '2020-01-03 18:48:26');
+INSERT INTO `materials` VALUES (51, 1, '', 'c', 1.00, 234.00, 'SOLID', '2020-01-09 21:52:41');
+INSERT INTO `materials` VALUES (52, 1, '140-75-0', 'EXCEL 1A', 1.00, 125.14, 'SOLID', '2020-02-07 22:13:05');
+INSERT INTO `materials` VALUES (53, 1, '435345', 'mat1', 1.00, 34.00, 'SOLID', '2020-02-07 22:15:05');
+INSERT INTO `materials` VALUES (54, 1, '435345', 'mat1', 1.00, 34.00, 'SOLID', '2020-02-07 22:15:15');
+INSERT INTO `materials` VALUES (55, 1, '3434', 'mat2', 1.00, 56.00, 'SOLID', '2020-02-07 22:17:40');
+INSERT INTO `materials` VALUES (56, 1, '435', 'mat3', 1.00, 77.00, 'SOLID', '2020-02-07 22:21:48');
+INSERT INTO `materials` VALUES (57, 1, '5454', 'mat4', 1.00, 23.00, 'SOLID', '2020-02-07 22:27:49');
+INSERT INTO `materials` VALUES (58, 1, '5454', 'mat4', 1.00, 23.00, 'SOLID', '2020-02-07 22:28:03');
+INSERT INTO `materials` VALUES (59, 1, '5454', 'mat4', 1.00, 23.00, 'SOLID', '2020-02-07 22:28:06');
+INSERT INTO `materials` VALUES (60, 1, '6767', 'mat6', 1.00, 88.00, 'SOLID', '2020-02-07 22:29:15');
+INSERT INTO `materials` VALUES (61, 1, '11111', 'mat1312', 1.00, 899.00, 'SOLID', '2020-02-07 22:30:12');
+INSERT INTO `materials` VALUES (62, 1, '234324', 'matt', 1.00, 222.00, 'SOLID', '2020-02-07 22:30:49');
+INSERT INTO `materials` VALUES (63, 1, '140-75-0', 'EXCEL 1A', 1.00, 125.14, 'SOLID', '2020-02-07 22:31:23');
+INSERT INTO `materials` VALUES (64, 1, '999', 'mat99', 1.00, 454.00, 'SOLID', '2020-02-07 22:41:53');
+
+-- ----------------------------
+-- Table structure for requests
+-- ----------------------------
+DROP TABLE IF EXISTS `requests`;
+CREATE TABLE `requests`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `message` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `date` datetime(0) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of requests
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for settings
+-- ----------------------------
+DROP TABLE IF EXISTS `settings`;
+CREATE TABLE `settings`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `value` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of settings
+-- ----------------------------
+INSERT INTO `settings` VALUES (1, 'eur-usd', '1.1');
+
+-- ----------------------------
+-- Table structure for web_users
+-- ----------------------------
+DROP TABLE IF EXISTS `web_users`;
+CREATE TABLE `web_users`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `password` varchar(60) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  `userdescr` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
+  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 32 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of web_users
+-- ----------------------------
+INSERT INTO `web_users` VALUES (0, 'Admin', '$2y$10$I6splPXIvJiXWm4twTHuzugV6LeFksFu/zDENTI9pSXg9CaL.Epa6', 'Διαχειριστής ', 'admin@pharmathen.gr');
+INSERT INTO `web_users` VALUES (2, 'theodoros45688', '$2y$10$OUDg/sUA4qY3ctd0M9V.4uy88C4x4yLU1DJcMI7neC60vvUBxr3cm', 'Χημικός', 'theo@pharmathen.gr');
+INSERT INTO `web_users` VALUES (5, 'fanos44', '$2y$10$SSD4Q5avZib3TgI2n.G0OeHPse0kxZ/tHPnEiBsHM7WJTrljiZyJi', 'xhmikos', 'fanos@yahoo.gr');
+INSERT INTO `web_users` VALUES (8, 'madika', '$2y$10$0ybln5OiE47zo7n9Ezg/VOxoAaMJaUGFGasxzzQD2KwONdCJlTUr.', NULL, 'madika@gmail.com');
+INSERT INTO `web_users` VALUES (12, 'nikolas', '$2y$10$tF0leK64CHnHj1Yq9nxFxeIg2yBn.R4i9TZa3TqXrUP5R5s1gzhoq', NULL, 'nikolas@gmail.com');
+INSERT INTO `web_users` VALUES (27, 'giota', '$2y$10$t9OcnQhe10wVs3W7J1O5m.sIqvk0Q8sv9.FoT2VgSxZWjEqRgL01q', NULL, 'giota@gmail.com');
+INSERT INTO `web_users` VALUES (31, 'ellinas', '$2y$10$ZlKxrJqPQjw6KHOf.JNgLuAnhV.FH3f287T8AnxitjJ6iKGBu7Hly', NULL, 'ellinas@gmail.com');
+
+SET FOREIGN_KEY_CHECKS = 1;

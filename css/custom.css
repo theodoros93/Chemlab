@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+html,body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.input{
+    margin: 15px;
+}
+
+.label{
+    display: block;
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.btn:not(.edit-material-btn):not(.remove-material-btn){
+    margin-top: 20px;
+}
+
+.delete-btn{
+    display: none;
+    float: right;
+}
+
+#material-price{
+    display: none;
+    width: 100px;
+    margin: auto;
+}
+
+#datepicker{
+    margin: auto;
+    margin-top: 30px;
+    width: 200px;
+}
+
+textarea{
+    display: none;
+}
+
+#stages{
+    table-layout: fixed;
+    margin: 0 auto;
+}
+
+#stages thead th,
+#stages tbody td,
+#stages tbody input
+{
+    min-width: 50px;
+    max-width: 85px; 
+    font-size: 12px;
+}
+
+#stages thead th{
+    padding: 5px;
+    text-align: center;
+}
+
+#stages tfoot td{
+    height: 40px;
+}
+
+input[type="text"],
+input[type="number"]
+{
+    padding: 5px !important;
+    height: 35px;
+}
+
+.stage-text{
+    background: #808000;
+    height: 25px;
+    text-align: left;
+    color: #fff;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.delete-material-btn{
+    margin: 0;
+    padding: 0;
+    width: 26px;
+    height: 26px;
+}
+
+.footer td input{
+    background:	#EEE8AA;
+}
+
+[data-text="cc/kg api"], 
+[data-text="actual cc/kg api"], 
+[data-text="cost"], 
+[data-text="contribution %"],
+[data-text="contribution"],
+[data-text="api cc"]
+{
+    color: #00008B;
+    font-weight: bold;
+}
+
+#stages input[readonly]{
+    background:	#ddd !important;
+}
+
+/*td[data-text="usd"]:before{
+    content: 'Υπολ';
+    float: right;
+    font-size: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    right: 4px;
+    top: -4px;
+}*/
+
+#material-select{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.center-wrap{
+    margin: 0 auto;
+    width: 300px;
+}
+
+.chosen-container{
+    width: auto;
+    white-space: nowrap;
+}
+
+#chart{
+    max-height: 700px;
+}
+
+
+
+#new-material-form{
+    display: none;
+}
+
+#new-material-form input{
+    margin: 10px auto;
+}
+
+
+.materials-box input{
+    width: 150px;
+    margin: 0 auto;
+}

@@ -1,0 +1,19 @@
+html,body { 
+  background: url("bagkr.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.LoginBox{
+  text-align:center;
+  margin:auto; 
+  padding:2%;
+  display:block; 
+  width:400px; 
+  top:26%; 
+  position:relative;
+  background-color:#ccffb3;
+  box-shadow:5px 5px 5px black;
+  border-radius:8px;
+}

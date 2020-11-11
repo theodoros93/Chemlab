@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap');
+
+html, body{
+    font-family: 'Saira Semi Condensed', sans-serif;
+}
+
+h1{
+    color: #006400;
+}
+h2{
+    color: #006400;
+}
+h3{
+    color: #006400;
+}
+
+
+th, td{
+    max-width: 80px;
+    padding: -2px !important;
+    font-size: 15px;
+}
+
+th{
+    font-size: 15px;
+}
+
+input{
+
+    border: none;
+    background: none;
+}
+
+td:nth-child(1), th[data-text="a/a"]{
+    max-width: 30px;
+    width: 30px;
+}
+
+.stage-text{
+    background: #808000;
+    color: #fff;
+}
+.container {
+    border: 1px solid #000099;
+  border-radius: 1px;
+  background-color:  #e6e6ff;
+  padding: 20px;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 5px solid #ddd;
+  margin: -70px;
+  background-color:  #e6e6ff;
+}
+.container2 {
+    border: 1px solid black;
+  border-radius: 1px;
+  background-color:  white;
+  padding: 20px;
+}
+.column {
+    float: left;
+    margin: 0;
+    width: 33%;
+}

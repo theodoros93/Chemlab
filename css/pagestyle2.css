@@ -1,0 +1,196 @@
+html { 
+  background: url("b2.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.LoginBox
+{
+text-align:center;
+margin:auto; 
+padding:2% 10%;
+display:block; 
+width:400px; 
+top:36%; 
+position:relative;
+background-color:#ccffb3;
+box-shadow:5px 5px 5px black;
+border-radius:8px;
+}
+
+#textspace{
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#textspace2{
+  text-align: center;
+  display: block;
+  width:100%;
+  margin: 15px;
+  box-shadow:2px 2px 2px black;
+  cursor: pointer;
+}
+
+.textspace{
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.Button{
+background-color:grey;
+border: none;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+padding:10px;
+box-shadow:2px 2px 2px black;
+
+}
+.Button:hover{
+background-color:#206600;
+}
+.Button:active{
+transform: translateY(4px);
+}
+.example_a {
+color: black !important;
+text-decoration: none;
+background: grey;
+padding: 12px;
+border-radius: 10px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+font-size: 16px;
+}
+.example_a:hover {
+background: #206600;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
+.inputBox{
+text-align:center;
+margin:auto; 
+padding:5% 10%;
+width:22%;
+display:block;  
+background-color:white;
+border-radius:8px;
+box-shadow:5px 5px 5px black;
+}
+
+.headertext{
+border: 2px solid grey;
+margin-bottom:10px;
+}
+
+#prodselect{
+padding: 12px; 20px;
+box-sizing: border-box;
+border:none;
+text-align: center;
+background-color:grey;
+}
+
+.orderdetails{
+text-align:center;
+margin:auto; 
+padding:40px;
+display:block; 
+width:200px; 
+top:12%; 
+position:relative;
+background-color:white;
+border-radius:8px;
+box-shadow:5px 5px 5px black;
+}
+
+.menubox{
+text-align:center;
+margin:auto; 
+padding:5% 10%;
+width:22%;
+display:block;  
+border-radius:8px;
+
+background-color:#ccffb3;
+box-shadow:5px 5px 5px black;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.Button2{
+background-color:#ff6666;
+border: none;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+padding:10px;
+
+}
+.Button2:hover{
+background-color:red;
+}
+.Button2:active{
+transform: translateY(4px);
+}
+
+.Buttonback{
+background-color:white;
+border: none;
+text-align: center;
+display: inline-block;
+font-size: 16px;
+padding:10px;
+}
+.Buttonback:hover{
+background-color:#ff3333;
+}
+
+table{
+	
+	border-collapse: collapse;
+	width:70%;
+}
+thead{
+	background-color:#e6ffcc;
+	border-radius:15px;
+	border:grey solid 1px;
+}
+th{
+	border:grey solid 1px;
+}
+td{
+	border:grey solid 1px;
+	background-color: #d9d9d9;
+	text-align: center;
+}
+.tablecontainer{
+text-align:center;
+margin:auto; 
+padding:auto;
+width:50%;
+display:block;  
+background-color:white;
+box-shadow:5px 5px 5px black;
+ 
+}
+@media screen and (max-width:500px) {
+   .menubox, .LoginBox {
+    width:87%;
+    }
+   
+border: #e6ffff ridge 10px;

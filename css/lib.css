@@ -1,0 +1,177 @@
+body {
+font: 14px sans-serif; 
+background: url("b2.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+.LoginBox{
+  text-align:center;
+  margin:auto;  
+  top:26%; 
+padding:2%;
+width:30%;
+  position:relative;
+  background-color:#ccffb3;
+  box-shadow:5px 5px 5px black;
+  border-radius:8px;
+}
+
+.LoginBox2{
+  text-align:center;
+  margin:auto;  
+  top:26%; 
+padding:2%;
+width:90%;
+  position:relative;
+  background-color:#ccffb3;
+  box-shadow:5px 5px 5px black;
+  border-radius:8px;
+}
+.LoginBox3{
+  text-align:center;
+  margin:auto; 
+  padding:2%;
+  display:block; 
+  width:400px; 
+  top:26%; 
+  position:relative;
+  background-color:#ccffb3;
+  box-shadow:5px 5px 5px black;
+  border-radius:8px;
+}
+
+.materials-box{
+  text-align:center;
+  margin:auto; 
+  padding:2%;
+  display:block; 
+  width:1000px; 
+  top:26%; 
+  position:relative;
+  background-color:#ccffb3;
+  box-shadow:5px 5px 5px black;
+  border-radius:8px;
+}
+
+.headertext{
+  text-align:center;
+  border: 2px solid grey;
+  margin-bottom:10px;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col-xs-6 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  border: 1px solid #ddd;
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.wrapper{  padding: 20px; }
+        .input#image-button{
+    background: #ccc url("icon.png") no-repeat top left;
+    padding-left: 16px;
+    height: 16px;
+}   
+    .bs-example{
+    	margin: 20px;
+    }
+    .icon-input-btn{
+        display: inline-block;
+        position: relative;
+    }
+    .icon-input-btn input[type="submit"]{
+        padding-left: 2em;
+    }
+    .icon-input-btn .glyphicon{
+        display: inline-block;
+        position: absolute;
+        left: 0.65em;
+        top: 30%;
+color:white;
+    }
+.Button
+{
+  color: black;
+  background-color:grey;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding:10px;
+  box-shadow:2px 2px 2px black;
+  border-radius: 10px;
+}
+
+.Button:hover{
+  background-color:#206600;
+}
+
+.Button:active{
+  transform: translateY(4px);
+}
+.example_b {
+color: black !important;
+text-decoration: none;
+background: grey;
+padding: 12px;
+border-radius: 10px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+font-size: 16px;
+}
+.example_b:hover {
+background: #206600;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
+#textspace{
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#textspace2{
+  text-align: center;
+  display: block;
+  width:100%;
+  margin:7px;
+  box-shadow:2px 2px 2px black;
+}
+
+.textspace{
+  padding: 10px;
+  box-sizing: border-box;
+}
+

@@ -1,0 +1,243 @@
+html,body { 
+  background: url("b2.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.LoginBox{
+  text-align:center;
+  margin:auto; 
+  padding:2%;
+  display:block; 
+  width:400px; 
+  top:26%; 
+  position:relative;
+  background-color:#ccffb3;
+  box-shadow:5px 5px 5px black;
+  border-radius:8px;
+}
+.LoginBox2{
+  text-align:center;
+  margin:auto; 
+  padding:2%;
+  display:block; 
+  width:1000px; 
+  top:26%; 
+  position:relative;
+  background-color:#ccffb3;
+  box-shadow:5px 5px 5px black;
+  border-radius:8px;
+}
+.LoginBox3{
+  text-align:center;
+  margin:fixed; 
+  padding:2%;
+  display:block; 
+  width:85%; 
+  height:fixed;
+  left: 8%;
+  position:absolute;
+  background-color:#ccffb3;
+  box-shadow:5px 5px 5px black;
+  border-radius:8px;
+}
+.sel{
+  width: 300px;
+}
+#textspace{
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#textspace2{
+  text-align: center;
+  display: block;
+  width:100%;
+  margin:7px;
+  box-shadow:2px 2px 2px black;
+}
+
+.textspace{
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.Button{
+  color: black;
+  background-color:grey;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding:10px;
+  box-shadow:2px 2px 2px black;
+  border-radius: 10px;
+}
+
+.Button:hover{
+  background-color:#206600;
+}
+
+.Button:active{
+  transform: translateY(4px);
+}
+.example_b {
+color: black !important;
+text-decoration: none;
+background: grey;
+padding: 12px;
+border-radius: 10px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+font-size: 16px;
+}
+.example_b:hover {
+background: #206600;
+letter-spacing: 1px;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
+
+.inputBox{
+  overflow: auto;
+  text-align:center;
+  margin:auto; 
+  padding: 15px;
+  width: 100%;
+  max-width: 1600px;
+  height: 95%;
+  display:block;  
+  background-color: rgb(204,255,179, 0.9);
+  border-radius:8px;
+  box-shadow:5px 5px 5px black;
+}
+
+.headertext{
+  text-align:center;
+  border: 2px solid grey;
+  margin-bottom:10px;
+}
+
+#prodselect{
+  padding: 12px;
+  box-sizing: border-box;
+  border:none;
+  text-align: center;
+  background-color:grey;
+}
+
+.orderdetails{
+  text-align:center;
+  margin:auto; 
+  padding:40px;
+  display:block; 
+  width:200px; 
+  top:12%; 
+  position:relative;
+  background-color:white;
+  border-radius:8px;
+  box-shadow:5px 5px 5px black;
+}
+
+.menubox{
+  text-align:center;
+  padding:5% 10%;
+  margin:auto; 
+  width:35%; 
+  border-radius:8px;
+  display:block; 
+  background-color: #ccffb3;
+  box-shadow:5px 5px 5px black;
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.Button2{
+  background-color: grey;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding:10px;
+
+}
+.Button2:hover{
+  background-color:red;
+}
+
+.Button2:active{
+  transform: translateY(4px);
+}
+
+.Buttonback{
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  padding:1px;
+  width: 4%;
+}
+
+.Buttonback:hover{
+  background-color: green;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+thead{
+	background-color:#e6ffcc;
+	border-radius:15px;
+	border:grey solid 1px;
+}
+
+th{
+	border:grey solid 1px;
+}
+
+td{
+	border:grey solid 1px;
+	background-color: #d9d9d9;
+	text-align: center;
+}
+
+.tablecontainer{
+  text-align:center;
+  margin:auto; 
+  padding:auto;
+  width:50%;
+  display:block;  
+  background-color:white;
+  box-shadow:5px 5px 5px black;
+}
+
+@media only screen and (max-width: 950px) {
+  .LoginBox2{
+  text-align:center;
+  margin:auto; 
+  padding:2%;
+  display:block; 
+  width:450px; 
+  top:26%; 
+  position:relative;
+  background-color:#ccffb3;
+  box-shadow:5px 5px 5px black;
+  border-radius:8px;
+}
+}
