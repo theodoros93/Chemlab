@@ -5,7 +5,7 @@ session_start();
 
 }
 else{
-	header("Location: index.php");
+	header("Location: login.php");
 	die("You are not Logged In!");
 } 
 $sestype = $_SESSION['utype'];
